@@ -1,9 +1,7 @@
 var express = require('express');
 var router = express.Router();
+const flightList = require('../models/flight');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/', flightList.index);
 
 module.exports = router;
