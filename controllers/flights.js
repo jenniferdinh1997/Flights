@@ -23,7 +23,7 @@ function newFlight(req,res) {
 function create(req,res) {
     Flight.create(req.body, function(err,flights){
         if (err) return res.redirect('flights/new');
-        res.redirect('/flights/index')
+        res.redirect('flights/index')
     })
 }
 

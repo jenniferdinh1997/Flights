@@ -3,9 +3,9 @@ var router = express.Router();
 const flightsController = require('../controllers/flights');
 
 // localhost:3000/flights
-router.get('/index', flightsController.index);
+router.get('/', flightsController.index);
 router.get('/new', flightsController.new);
-router.post('/index', flightsController.create);
-router.post('/show', flightsController.show);
+router.post('/', flightsController.create);
+router.post('/:id', flightsController.show);
 
 module.exports = router;

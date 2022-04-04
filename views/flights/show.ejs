@@ -19,5 +19,18 @@
         <li>Airport: <%= f.airport %> </li>
         <li>Arrival: <%= f.arrival %> </li>
         <% }); %>
+
+        <h3>Add a Destination</h3>
+        <label>Airport</label>
+            <select name="airport">
+                <option value="AUS">ATL</option>
+                <option value="DFW">DFW</option>
+                <option value="DEN">DEN</option>
+                <option value="LAX">LAX</option>
+                <option value="SAN">SAN</option>
+            </select>
+
+        <label>Arrival Date & Time</label>
+        <input type="date">
 </body>
 </html>
