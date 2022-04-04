@@ -16,9 +16,12 @@ function index(req,res){
 }
 
 function newFlight(req,res) {
-    res.render('flights/index')
+    res.render('flights/new');
 }
 
 function create(req,res) {
-
+    Flight.create(req.body, function(err,flights){
+        if (err) return res.redirect('flights/new');
+        res.redirect('/flights/index')
+    })
 }

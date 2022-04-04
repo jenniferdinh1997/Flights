@@ -18,8 +18,18 @@ const flightSchema = new Schema ({
         required: true
     },
     departs: {
-        type: Date,
-        default: Date.now()
+        type: Date
+    },
+    destinations: [destinationSchema]
+})
+
+const destinationSchema = new Schema ({
+    airport: {
+        type: String,
+        enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN']
+    },
+    arrival: {
+        type: Date
     }
 })
 

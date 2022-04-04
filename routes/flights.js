@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-const flightList = require('../controllers/flights');
+const flightsController = require('../controllers/flights');
 
 // localhost:3000/flights
-router.get('/', flightList.index);
-router.get('/new', flightList.new);
-router.post('/', flightList.create);
+router.get('/', flightsController.index);
+router.get('/new', flightsController.new);
+router.post('/', flightsController.create);
 
 module.exports = router;
