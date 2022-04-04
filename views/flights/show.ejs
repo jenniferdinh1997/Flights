@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Details</title>
+</head>
+<body>
+    <h1>Flight Details</h1>
+
+        <h3>Airline: <%= flights.airline %></h3>
+        <h3>Airport: <%= flights.airport %></h3>
+        <h3>Flight No.: <%= flights.flightNo %></h3>
+        <h3>Departure: <%= flights.departs %></h3>
+        
+        <h3>Destinations:</h3>
+        <% flights.destinations.forEach(function(f) { %>
+        <li>Airport: <%= f.airport %> </li>
+        <li>Arrival: <%= f.arrival %> </li>
+        <% }); %>
+</body>
+</html>
