@@ -1,7 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const flightList = require('../models/flight');
+const flightList = require('../controllers/flights');
 
+// localhost:3000/flights
 router.get('/', flightList.index);
+router.get('/new', flightList.new);
 
 module.exports = router;
