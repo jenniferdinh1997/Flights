@@ -8,6 +8,7 @@ require('./config/database');
 
 var indexRouter = require('./routes/index');
 var flightsRouter = require('./routes/flights');
+const destinationRouter = require('./routes/destinations');
 
 var app = express();
 
@@ -24,6 +25,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/flights', flightsRouter);
+app.use('/', destinationRouter); //nested resources are always mounted in server.js at /
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

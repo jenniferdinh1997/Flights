@@ -21,7 +21,7 @@
         <% }); %>
 
     <h3>Add a Destination</h3>
-    <form action="/flights/<%= flights._id %>" method="POST" autocomplete="off">
+    <form action="/flights/<%= flights._id %>/destination" method="POST" autocomplete="off">
         <label>Airport</label>
             <select name="airport">
                 <option value="AUS">ATL</option>
@@ -31,9 +31,9 @@
                 <option value="SAN">SAN</option>
             </select>
 
-        <label>Arrival Date & Time</label>
+        <label>Arrival Date</label>
         <input name="arrival" type="date">
-        <input type="submit">
+        <input type="submit" value="Add Destination">
     </form>
 </body>
 </html>
