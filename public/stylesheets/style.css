@@ -1,8 +1,13 @@
+html {
+  background-color: rgba(201,212,221,1);
+}
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'PT Serif', serif;
+  text-align: center;
 }
 
 a {
-  color: #00B7FF;
+  color: rgba(118,134,152,1);
 }

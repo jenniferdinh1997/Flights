@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Flight</title>
-</head>
+<%- include('../partials/header') %>
+
 <body>
     <h1>Add a Flight</h1>
     <form action="/flights" method="POST" autocomplete="off">
@@ -30,9 +24,10 @@
             <input name="flightNo" type="number">
 
         <label>Departure:</label>
-            <input name="departs" type="date">
+            <input name="depart" type="date">
         
         <input type="submit" value="Add Flight">
     </form>
 </body>
-</html>
+
+<%- include('../partials/footer') %>
