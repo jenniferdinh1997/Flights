@@ -21,7 +21,7 @@ caption {
 }
 
 th {
-    font-size: 30px;
+    font-size: 25px;
     background-color: rgba(224,223,229,1);
 }
 
@@ -46,7 +46,7 @@ th {
     margin-right: auto;
     margin-bottom: 30px;
     margin-top: 30px;
-    width: 85%;
+    width: 90%;
     border-collapse: collapse;
     border-radius: 20px;
 }
