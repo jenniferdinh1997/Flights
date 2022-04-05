@@ -1,8 +1,25 @@
-<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/new.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <title> <%= title %> </title>
+</head>
 
 <body>
+    <nav>
+        <a href="/">
+            <input type="button" id="home" value="Home">
+        </a>
+    </nav>
+
     <h1>Add a Flight</h1>
-    <form action="/flights" method="POST" autocomplete="off">
+    <form action="/flights" method="POST" id="add" autocomplete="off">
         <label>Airline:</label>
             <select name="airline">
                 <option value="American">American</option>
@@ -26,8 +43,8 @@
         <label>Departure:</label>
             <input name="depart" type="date">
         
-        <input type="submit" value="Add Flight">
+        <input type="submit" id="addFl" value="Add Flight">
     </form>
 </body>
 
-<%- include('../partials/footer') %>
+</html>
