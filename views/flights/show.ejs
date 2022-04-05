@@ -44,9 +44,12 @@
             <th>Flight</th>
         </tr>
 
+        <% ticket.forEach(function(t) { %> 
         <tr>
-            <td></td>
+            <td><%= t.seat %> </td>
+            <td><%= t.price %> </td>
         </tr>
+    <% }) %>
     </table>
 
     <a href='/flights/<%= flights._id %>/tickets/new '>

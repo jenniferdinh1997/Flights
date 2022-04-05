@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Add New Ticket</h1>
-    <form action="/flights/" method="POST" autocomplete="off">
+    <form action="/flights/<%= flight._id %>/tickets/new" method="POST" autocomplete="off">
         <label>Seat</label>
             <input name="seat" required pattern="[A-F][1-9]\d?">
         
