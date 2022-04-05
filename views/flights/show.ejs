@@ -9,18 +9,19 @@
 <body>
     <h1>Flight Details</h1>
 
-        <h3>Airline: <%= flights.airline %></h3>
-        <h3>Airport: <%= flights.airport %></h3>
-        <h3>Flight No.: <%= flights.flightNo %></h3>
-        <h3>Departure: <%= flights.departs %></h3>
+    <h3>Airline: <%= flights.airline %></h3>
+    <h3>Airport: <%= flights.airport %></h3>
+    <h3>Flight No.: <%= flights.flightNo %></h3>
+    <h3>Departure: <%= flights.departs %></h3>
         
-        <h3>Destinations:</h3>
+    <h3>Destinations:</h3>
         <% flights.destinations.forEach(function(f) { %>
         <li>Airport: <%= f.airport %> </li>
         <li>Arrival: <%= f.arrival %> </li>
         <% }); %>
 
-        <h3>Add a Destination</h3>
+    <h3>Add a Destination</h3>
+    <form action="/flights/<%= flights._id %>" method="POST" autocomplete="off">
         <label>Airport</label>
             <select name="airport">
                 <option value="AUS">ATL</option>
@@ -31,6 +32,7 @@
             </select>
 
         <label>Arrival Date & Time</label>
-        <input type="date">
+        <input name="arrival" type="date">
+    </form>
 </body>
 </html>
